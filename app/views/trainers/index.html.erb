@@ -1,0 +1,9 @@
+<div class="container">
+  <% @trainers.each do |trainer| %>
+    <%= link_to trainer_path(trainer) do%>
+      <%= cl_image_tag trainer.photo.key %>
+      <%= trainer.name %>
+      <%= trainer.age %>
+    <% end %>
+  <% end %>
+</div>
